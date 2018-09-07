@@ -1,0 +1,99 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Formulário</title>
+		<link rel="stylesheet" type="text/css" href="css/formulario.css">
+		<script src="js/funcoes.js"></script>
+		
+	</head>
+	<body>
+	    <p>Formulário de solicitação de informação (Pessoa Física)</P>
+		<form action="">
+			As informações abaixo são obrigatórias<br>
+			Nome:<br><input type="text" name="nome" value="" size="35" pattern="[a-z\s]+$" required="yes"><br>
+			<br>CPF:
+			<input type="text" name="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
+			<p>Ou, se preferir, informar outro documento de identificação(RG,CNH,Passaporte,RNE ou outyro documento válido. Se a opção  for por RG, indicar órgão emissor e UF):</p>
+			Tipo de documento:<input type="text" name="tipo do documento" value=""> N°:<input type="text" name="n°" value=""><br>
+			Endereco eletronico (e-mail):<input type="text" name="endereco eletronico (e-mail)" value=""><br>
+			Endereco fisico (Rua,n°,complemento,bairro):<br><input type="text" name="endereco fisico(rua,n°,complemento,bairro)" value=""><br>
+			Cidade:<input type="text" name="cidade" value="">
+			Estado:<input type="text" name="estado" value="">
+			UF:
+			<select name="estado">
+				<option value="">AC</option>
+				<option value="">AL</option>
+				<option value="">AP</option>
+				<option value="">AM</option>
+				<option value="">BA</option>
+				<option value="">CE</option>
+				<option value="">DF</option>
+				<option value="">ES</option>
+				<option value="">GO</option>
+				<option value="">MA</option>
+				<option value="">MT</option>
+				<option value="">MS</option>
+				<option value="">MG</option>
+				<option value="">PA</option>
+				<option value="">PB</option>
+				<option value="">PR</option>
+				<option value="">PE</option>
+				<option value="">PI</option>
+				<option value="">RJ</option>
+				<option value="">RN</option>
+				<option value="">RS</option>
+				<option value="">RO</option>
+				<option value="">RR</option>
+				<option value="">SC</option>
+				<option value="">SP</option>
+				<option value="">SE</option>
+				<option value="">TO</option>
+				</select><br>
+			CEP:<input type="text" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="10" onBlur="ValidaCep(form1.cep)">
+			
+			<p>Os campos a seguir são opcionais e se preenchidos contribuirão para a melhoriaa de nossos serviços</p>
+			
+			Sexo: <input type="radio" name="sexo" value="masculino">Masculino <input type="radio" name="sexo" value="feminino">Feminino    Data de nascimento:<input type="date" name="data-nascimento"><br><br>
+		
+			Escolaridade
+			<br><input type="radio" name="sem instituição" value="sem instituição">Sem instituição formal 
+			<br><input type="radio" name="Ensino Superior" value="Ensino Superior">Ensino Superior 
+			<br><input type="radio" name="Doutorado" value="Doutorado">Doutorado
+			<br><input type="radio" name="Ensino Fundamental" value="Ensino Fundamental">Ensino Fundamental 
+			<br><input type="radio" name="Especialização" value="Especialização">Especialização
+			<br><input type="radio" name="Ensino Médio" value="Ensino Médio">Ensino Médio 
+			<br><input type="radio" name="Mestrado" value="Mestrado">Mestrado<br>
+			
+			<br>Ocupação Principal/Profissão
+			<br><input type="radio" name="Empregado - setor privado" value="Empregado - setor privado">Empregado - setor privado
+			<br><input type="radio" name="Jornalista" value="Jornalista">Jornalista
+			<br><input type="radio" name="Membro de partido político" value="Membro de partido político">Membro de partido político
+			<br><input type="radio" name="Represente de sindicato" value="Represente de sindicato">Represente de sindicato
+			<br><input type="radio" name="Profis. Liberal/autônomo" value="Profis. Liberal/autônomo">Profis. Liberal/autônomo
+			<br><input type="radio" name="Pesquisador" value="Pesquisador">Pesquisador
+			<br><input type="radio" name="Professor" value="Professor">Professor
+			<br><input type="radio" name="Estudante" value="Estudante">Estudante
+			<br><input type="radio" name="Empresápario/empreendedor" value="Empresápario/empreendedor">Empresápario/empreendedor
+			<br><input type="radio" name="Servidor público federal" value="Servidor público federal">Servidor público federal
+			<br><input type="radio" name="Servidoe público estadual" value="Servidor público estadual">Servidoe público estadual
+			<br><input type="radio" name="Servidoe público municipal" value="Servidor público municipal">Servidor público municipal
+			<br><input type="radio" name="Membro de ONG nacional" value="Membro de ONG nacional">Membro de ONG nacional
+			<br><input type="radio" name="Membro de ONG internacional" value="Membro de ONG internacional">Membro de ONG internacional
+			<br><input type="radio" name="Outras" value="Outras">Outras<br>
+			
+			<br>Telefone:<input type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" maxlength="14"  onBlur="ValidaTelefone(form1.tel);">
+			
+			<P>Especificação do pedido de acesso à informação</P>
+			
+			Órgão/Entidade destinatário do pedido:<input type="text" name="orgao-entidade" value=""><br>
+			<br>Forma preferencial de recebimento da resposta
+			<br><input type="radio" name="pessoalmente" value="pessoalmente">Buscar/Consultar pessoalmente <input type="radio" name="email" value="email">E-mail <input type="radio" name="porconta" value="porconta">Por conta(com custo)<br>
+			Especificação do pedido:<br>
+			<textarea name="mensagem" rows="10" cols="40
+			"></textarea><br><br>			
+			
+		</form>
+			
+	
+	</body>
+</html>
