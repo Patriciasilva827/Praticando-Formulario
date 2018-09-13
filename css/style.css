@@ -1,9 +1,53 @@
 body{
 	font-family: arial;
-	font-size: 10px;
+	font-size: 12px;
+	background-color: grey;
+	
 }
-#form{
-	position: absolute;
-	top: 20px
-	left: 20px;
+div#interface{
+	width: 600px;
+	background-color: white;
+	margin: 0px auto 0px auto;
+	padding: 80px 80px 10px 80px;
 }
+hgroup{
+	border-style: solid;
+	padding: 10px;
+	
+}
+div#coluna1{
+	float: left;
+}
+div#coluna2{
+	float: left;
+}
+div#coluna3{
+	float: left;
+}
+header#cabecalho{
+	border-bottom: 10px #C0C0C0 solid;
+	font-size:14px;
+}
+div#titulo{
+	border:10px;
+	padding:1px;
+	background-color: #C0C0C0;
+	margin:2px;
+	
+}
+input,textarea,select{
+	border:none;
+	background-color: #CEDEF4;
+}
+div#logo1{
+	position:absolute;
+	font-size: 40px;
+	left: 810px;
+	top: 60px;
+	color:red;
+}
+div#logo2{
+	position:absolute;
+	font-size: 13px;
+	left: 880px;
+	top: 60px;
