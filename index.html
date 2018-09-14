@@ -11,7 +11,8 @@
 	<div id="interface">
 		
 		<header id="cabecalho"><b>Formulário de solicitação de informação (<i>Pessoa Física</i>)</b></header>
-		<form action="">
+		
+		<form name="frmcpf" method="post" action="index.html" onsubmit="VerificaCPF();">
 		    <div id="logo1"><b>SiC</b></div>
 			 <div id="logo2"><b>Serviço de<br>Informações<br>ao Cidadão</b></div>
 			<br><div id="titulo">As informações abaixo são obrigatórias</div>
@@ -19,7 +20,8 @@
 			<hgroup>
 			<b>Nome:</b>&nbsp;<input type="text" name="nome" value="" size="70" pattern="[a-z\s]+$" required="yes"><br>
 			<br><b>CPF:</b>&nbsp;
-			<input type="text" name="cpf" onBlur="ValidarCPF(form1.cpf);" onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
+			
+			<input type="text" name="cpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
 			<p>Ou, se preferir, informar outro documento de identificação (RG, CNH, Passaporte, RNE ou outro documento válido. Se a opção  for por RG, indicar órgão emissor e UF):</p>
 			<b>Tipo de documento:</b>&nbsp;<input type="text" name="tipo do documento" value="">&nbsp;
 			<b>N°:</b>&nbsp;<input type="text" name="num" size="30" value=""><br>
@@ -60,14 +62,14 @@
 				<option value="">TO</option>
 				</select><br>
 				
-			<br><b>CEP:</b>&nbsp;<input type="text" name="cep" onKeyPress="MascaraCep(form1.cep);" maxlength="10" onBlur="ValidaCep(form1.cep)">&nbsp;
+			<br><b>CEP:</b>&nbsp;<input type="text" name="cep" maxlength="9" OnKeyPress="formatar('#####-###', this)" >&nbsp;
 			<b>País:</b>&nbsp;<input typr="text" name="pais" value="">
 			</hgroup>
 			
 			<br><div id="titulo">Os campos a seguir são opcionais e se preenchidos contribuirão para a melhoriaa de nossos serviços</div>
 			
 			<hgroup>
-			<b>Sexo</b>: <input type="radio" name="sexo" value="masculino">Masculino <input type="radio" name="sexo" value="feminino">Feminino &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Data de nascimento:&nbsp;&nbsp;</b><input type="date" name="data-nascimento"><br><br>
+			<b>Sexo</b>: <input type="radio" name="sexo" value="masculino">Masculino <input type="radio" name="sexo" value="feminino">Feminino &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Data de nascimento:&nbsp;&nbsp;</b><input type="text" name="data" maxlength="10" OnKeyPress="formatar('##/##/####', this)" /><br><br>
 			
 			<div id="coluna1">
 			<b>Escolaridade</b>
@@ -109,7 +111,8 @@
 			<br><input type="radio" name="ocupacao" value="Outras">Outras
 			</div><br><br><br><br><br>
 			
-			<br><br><br><br><br>Telefone:</b><input type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" maxlength="14"  onBlur="ValidaTelefone(form1.tel);">
+			<br><br><br><br><br>Telefone:</b><input type="text" name="tel" maxlength="12" OnKeyPress="formatar('##-####-####', this)" >
+			
 			</hgroup>
 			
 			<br><div id="titulo">Especificação do pedido de acesso à informação</div>
@@ -121,6 +124,8 @@
 			<br><b>Especificação do pedido:</b><br>
 			<textarea name="mensagem" rows="10" cols="79"></textarea><br><br>			
 			</hgroup>
+			
+			<input type="button" name="Submit" value="enviar" onclick="VerificaCPF();">
 			
 		</form>
 			
